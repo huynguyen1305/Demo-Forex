@@ -3,40 +3,32 @@ import React, { useEffect, useState } from "react";
 import type { ColumnsType } from "antd/es/table";
 import axios from "axios";
 
-interface DataType {
-  key: string;
-  name: string;
-  age: number;
-  address: string;
-  tags: string[];
-}
+// const abc = {
+//   marketPubkey: "68N1rdhstxvAipxwe1MVHBWAd8YaKiMtRUTfnv9zPCH5",
+//   collectionName: "FRAKT",
+//   collectionImage:
+//     "https://bucketeer-669fb267-3d5e-4f8d-bb42-c31b566a3619.s3.amazonaws.com/public/market_images/frakt.png",
+//   listingsAmount: 74,
+//   floorPrice: "2.805",
+//   bestoffer: "2.590",
+//   offerTVL: "133.543",
+//   nftValidationAdapter: "8UqgA1hBBCv4i6xyXLBSopRkzqwkGpqvzMUyGLyKk4vy",
+// };
 
-const abc = {
-  marketPubkey: "68N1rdhstxvAipxwe1MVHBWAd8YaKiMtRUTfnv9zPCH5",
-  collectionName: "FRAKT",
-  collectionImage:
-    "https://bucketeer-669fb267-3d5e-4f8d-bb42-c31b566a3619.s3.amazonaws.com/public/market_images/frakt.png",
-  listingsAmount: 74,
-  floorPrice: "2.805",
-  bestoffer: "2.590",
-  offerTVL: "133.543",
-  nftValidationAdapter: "8UqgA1hBBCv4i6xyXLBSopRkzqwkGpqvzMUyGLyKk4vy",
-};
-
-const bcd = {
-  address: "BiwemBos3Su9QcNUiwkZMbSKi7m959t5oVpmPnM9Z3SH",
-  name: "Lifinity Flares",
-  symbol: "FLARES",
-  image: "https://arweave.net/JUJQbnuSMSRWs0zsbMQOVBI2AEZsZpynPOO-vpkjlYo",
-  authentic: true,
-  hyperspaceProjectId: "lifinity",
-  listings: 1,
-  floorPrice: "13837000000",
-  globalFloorPrice: "9177272070",
-  bestOffer: "9900000",
-  offerTvl: "10000000",
-  volume: "51753000000",
-};
+// const bcd = {
+//   address: "BiwemBos3Su9QcNUiwkZMbSKi7m959t5oVpmPnM9Z3SH",
+//   name: "Lifinity Flares",
+//   symbol: "FLARES",
+//   image: "https://arweave.net/JUJQbnuSMSRWs0zsbMQOVBI2AEZsZpynPOO-vpkjlYo",
+//   authentic: true,
+//   hyperspaceProjectId: "lifinity",
+//   listings: 1,
+//   floorPrice: "13837000000",
+//   globalFloorPrice: "9177272070",
+//   bestOffer: "9900000",
+//   offerTvl: "10000000",
+//   volume: "51753000000",
+// };
 
 interface ResponsetType {
   listings: number;
